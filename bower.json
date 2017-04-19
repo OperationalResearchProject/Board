@@ -15,6 +15,10 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "morris.js": "morrisjs#^0.5.1",
+    "font-awesome": "^4.7.0",
+    "metisMenu": "metismenu#^2.7.0",
+    "raphael": "^2.2.7"
   }
 }
