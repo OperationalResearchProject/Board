@@ -11,14 +11,14 @@ var mongoose = require('mongoose');
 var mongoDB = 'mongodb://127.0.0.1/api';
 mongoose.connect(mongoDB);
 
-//Get the default connection
-var db = mongoose.connection;
-
-//Bind connection to error event (to get notification of connection errors)
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
 var app = express();
 
+
+//Get the default connection
+app.db = mongoose.connection;
+
+//Bind connection to error event (to get notification of connection errors)
+app.db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

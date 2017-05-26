@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
-var fitness = new mongoose.Schema({
+var fitnesses = new mongoose.Schema({
     transactionId: {type: String},
     solution: {type: String},
     fitness: {type: Number}
 });
 
-mongoose.model("Fitness", fitness);
-module.exports.Fitness = mongoose.model('Fitness');
+mongoose.model("Fitnesses", fitnesses);
+module.exports.Fitness = mongoose.model('Fitnesses');
