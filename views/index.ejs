@@ -52,41 +52,24 @@
                                                 <tr>
                                                     <th>Id of the transaction</th>
                                                     <th>Customer</th>
+                                                    <th>Type</th>
                                                     <th>Algorithm</th>
                                                     <th>Actual Best Fitness</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            <% transactions.forEach(function(transac){ %>
+
                                             <tr>
-                                                <td>LPM@83SXC5J;PQ8899T7</td>
-                                                <td>Florian</td>
-                                                <td>hillclimber_first_improvement</td>
-                                                <td>9.80</td>
+                                                <td><%= transac._id %></td>
+                                                <td><%= transac.customer %></td>
+                                                <td><%= transac.type %></td>
+                                                <td><%= transac.algorithm %></td>
+                                                <td><%= transac.best_fitness_id.fitness %></td>
                                             </tr>
-                                            <tr>
-                                                <td>LPM@83SXC5J;PQ8899T7</td>
-                                                <td>Florian</td>
-                                                <td>hillclimber_first_improvement</td>
-                                                <td>9.80</td>
-                                            </tr>
-                                            <tr>
-                                                <td>LPM@83SXC5J;PQ8899T7</td>
-                                                <td>Florian</td>
-                                                <td>hillclimber_first_improvement</td>
-                                                <td>9.80</td>
-                                            </tr>
-                                            <tr>
-                                                <td>LPM@83SXC5J;PQ8899T7</td>
-                                                <td>Florian</td>
-                                                <td>hillclimber_first_improvement</td>
-                                                <td>9.80</td>
-                                            </tr>
-                                            <tr>
-                                                <td>LPM@83SXC5J;PQ8899T7</td>
-                                                <td>Florian</td>
-                                                <td>hillclimber_first_improvement</td>
-                                                <td>9.80</td>
-                                            </tr>
+
+                                            <% }); %>
+
                                             </tbody>
                                         </table>
                                     </div>
