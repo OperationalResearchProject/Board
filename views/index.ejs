@@ -59,8 +59,7 @@
                                             </thead>
                                             <tbody>
                                             <% transactions.forEach(function(transac){ %>
-
-                                            <tr>
+                                            <tr class="rowTransac" transac="<%= transac._id %>">
                                                 <td><%= transac._id %></td>
                                                 <td><%= transac.customer %></td>
                                                 <td><%= transac.type %></td>
