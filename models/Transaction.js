@@ -8,6 +8,7 @@ var transaction = new mongoose.Schema({
     solution_size: {type: Number},
     best_fitness_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Fitnesses' },
     algorithm: {type: String},
+    created_at: {type: Date},
     type: {type: String}
 });
 
