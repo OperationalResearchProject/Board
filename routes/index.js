@@ -5,7 +5,7 @@ var apiCtrl = require('../controllers/api.ctrl');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     apiCtrl.getTransactions().then(function (tr) {
-        res.render('index', { transactionNumber: tr.length, userNumber: apiCtrl.getUserNumber(), transactions: tr });
+        res.render('index', { transactionNumber: tr.length, transactions: tr });
     });
 });
 
