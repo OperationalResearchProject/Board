@@ -9,4 +9,12 @@ router.get('/', function(req, res, next) {
     });
 });
 
+router.get('/fitnesses/:id', function(req, res) {
+
+    apiCtrl.getFitnesses(req.params.id).then(function (f) {
+        res.json(f);
+    });
+
+
+});
 module.exports = router;

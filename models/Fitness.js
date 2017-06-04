@@ -7,4 +7,4 @@ var fitnesses = new mongoose.Schema({
 });
 
 mongoose.model("Fitnesses", fitnesses);
-module.exports.Fitness = mongoose.model('Fitnesses');
+module.exports.Fitnesses = mongoose.model('Fitnesses');
