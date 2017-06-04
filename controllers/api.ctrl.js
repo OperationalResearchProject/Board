@@ -2,10 +2,6 @@ var mongoose = require('mongoose');
 const Transaction = require('../models/Transaction').Transaction;
 const Fitnesses = require('../models/Fitness').Fitnesses;
 
-module.exports.getTransactionNumber = function () {
-
-    return 42;
-};
 
 module.exports.getUserNumber = function () {
 
