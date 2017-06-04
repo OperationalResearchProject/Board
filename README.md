@@ -1,3 +1,2 @@
-# dashboard-ora
-
-Dashboard of Operationnal Resesearch API
+# ORA-Dashboard
+Dashboard of the Operational Research Api 
