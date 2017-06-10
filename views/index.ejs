@@ -65,7 +65,7 @@
                                                     <td class="loadable"><%= transac.type %></td>
                                                     <td class="loadable"><%= transac.algorithm %></td>
                                                     <td class="loadable"><%= transac.best_fitness_id.fitness %></td>
-                                                    <td><i class="fa fa-download" aria-hidden="true"></i></td>
+                                                    <td><a href="/solution/<%= transac.best_fitness_id._id %>/transac/<%= transac._id %>"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                                 </tr>
                                             <% }); %>
 

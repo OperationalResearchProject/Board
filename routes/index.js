@@ -10,11 +10,17 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/fitnesses/:id', function(req, res) {
-
     apiCtrl.getFitnesses(req.params.id).then(function (f) {
         res.json(f);
     });
-
-
 });
+
+router.get('/solution/:id/transac/:transac', function(req, res) {
+    apiCtrl.getSolution(req.params.id).then(function (result) {
+        res.header('Content-type', "application/octet-stream");
+        res.header('Content-disposition', 'attachment; filename=best_solution_'+req.params.transac+'.txt');
+        res.send(result[0].solution);
+    });
+});
+
 module.exports = router;

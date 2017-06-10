@@ -9,5 +9,9 @@ module.exports.getTransactions = function () {
 };
 
 module.exports.getFitnesses = function (transactionId) {
-   return Fitnesses.find({"transaction_id":transactionId}, "fitness");
+    return Fitnesses.find({"transaction_id": transactionId}, "fitness");
+};
+
+module.exports.getSolution = function (fitnessId) {
+    return Fitnesses.find({"_id": fitnessId}, "transaction_id solution");
 };
