@@ -5,6 +5,7 @@ $(function() {
         $('#graph-title-transac').html($(this).parent().attr("transac"));
         var data = [];
         var i = 0;
+        $('.loading').removeClass("loading-disable");
         $.ajax({
             url: '/fitnesses/'+$(this).parent().attr("transac"),
             type: 'GET',
@@ -25,6 +26,7 @@ $(function() {
                     lineWidth: 5,
                     ymax: data[0].fitness
                 });
+                $('.loading').addClass("loading-disable");
             }
         });
 
