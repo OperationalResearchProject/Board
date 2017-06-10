@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+.table-responsive table .rowTransac td{
+  vertical-align: middle;
+}
+.rowTransac td .fa-download{
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+}
