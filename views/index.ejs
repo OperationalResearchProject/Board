@@ -59,15 +59,14 @@
                                             </thead>
                                             <tbody>
                                             <% transactions.forEach(function(transac){ %>
-                                            <tr class="rowTransac" transac="<%= transac._id %>">
-                                                <td><%= transac._id %></td>
-                                                <td><%= transac.customer %></td>
-                                                <td><%= transac.type %></td>
-                                                <td><%= transac.algorithm %></td>
-                                                <td><%= transac.best_fitness_id.fitness %></td>
-                                                <td><i class="fa fa-download" aria-hidden="true"></i></td>
-                                            </tr>
-
+                                                <tr class="rowTransac" transac="<%= transac._id %>">
+                                                    <td class="loadable"><%= transac._id %></td>
+                                                    <td class="loadable"><%= transac.customer %></td>
+                                                    <td class="loadable"><%= transac.type %></td>
+                                                    <td class="loadable"><%= transac.algorithm %></td>
+                                                    <td class="loadable"><%= transac.best_fitness_id.fitness %></td>
+                                                    <td><i class="fa fa-download" aria-hidden="true"></i></td>
+                                                </tr>
                                             <% }); %>
 
                                             </tbody>

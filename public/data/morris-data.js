@@ -1,12 +1,12 @@
 $(function() {
 
-    $('.rowTransac').click(function () {
+    $('.rowTransac .loadable').click(function () {
         $('#morris-area-chart').html("");
-        $('#graph-title-transac').html($(this).attr("transac"));
+        $('#graph-title-transac').html($(this).parent().attr("transac"));
         var data = [];
         var i = 0;
         $.ajax({
-            url: '/fitnesses/'+$(this).attr("transac"),
+            url: '/fitnesses/'+$(this).parent().attr("transac"),
             type: 'GET',
             dataType: 'json',
             success: function (result, status) {
