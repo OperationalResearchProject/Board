@@ -14,13 +14,16 @@ $(function() {
                     data[i] = {"number": i, "fitness": f.fitness}
                     i = i + 1;
                 });
-                Morris.Area({
+                Morris.Line({
                     element: 'morris-area-chart',
                     data: data,
                     xkey: 'number',
                     ykeys: ['fitness'],
                     labels: ['fitness'],
-                    parseTime: false
+                    parseTime: false,
+                    pointSize: 0,
+                    lineWidth: 5,
+                    ymax: data[0].fitness
                 });
             }
         });
