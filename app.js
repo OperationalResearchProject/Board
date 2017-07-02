@@ -8,7 +8,7 @@ var index = require('./routes/index');
 var mongoose = require('mongoose');
 
 //Set up default mongoose connection
-var mongoDB = 'mongodb://127.0.0.1/api';
+var mongoDB = 'mongodb://mongodb/api';
 mongoose.connect(mongoDB);
 
 var app = express();
