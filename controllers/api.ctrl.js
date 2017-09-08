@@ -1,4 +1,3 @@
-var mongoose = require('mongoose');
 const Transaction = require('../models/Transaction').Transaction;
 const Fitnesses = require('../models/Fitness').Fitnesses;
 
@@ -14,4 +13,10 @@ module.exports.getFitnesses = function (transactionId) {
 
 module.exports.getSolution = function (fitnessId) {
     return Fitnesses.find({"_id": fitnessId}, "transaction_id solution");
+};
+
+module.exports.deleteTransaction = function (transactionId) {
+    return Transaction.deleteMany({"_id": transactionId}).then(function () {
+        return Fitnesses.deleteMany({"transaction_id": transactionId});
+    });
 };

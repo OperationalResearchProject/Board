@@ -2,10 +2,16 @@
 .table-responsive table .rowTransac td{
   vertical-align: middle;
 }
+.rowTransac td .fa-times{
+  font-size: 3em;
+  text-align: center;
+  width: 48%;
+  color: darkred;
+}
 .rowTransac td .fa-download{
   font-size: 3em;
   text-align: center;
-  width: 100%;
+  width: 48%;
 }
 .loading-disable{
   display: none;

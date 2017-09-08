@@ -23,4 +23,10 @@ router.get('/solution/:id/transac/:transac', function(req, res) {
     });
 });
 
+router.get('/transactions/delete/:id', function(req, res, next) {
+    apiCtrl.deleteTransaction(req.params.id).then(function () {
+        res.redirect('/');
+    });
+});
+
 module.exports = router;
